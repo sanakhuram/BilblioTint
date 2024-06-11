@@ -11,10 +11,13 @@ document.addEventListener("DOMContentLoaded", () => {
         eyeContainer.classList.add("eye-container");
         eyeContainer.innerHTML = `
             <div class="eye">
+             <div class="upper-eyelid"></div>
                 <div class="iris">
                     <div class="pupil"></div>
                     <div class="reflection"></div>
+                      
                 </div>
+                <div class="lower-eyelid"></div>
             </div>
         `;
         
