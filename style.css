@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background:linear-gradient(rgb(54, 58, 54), rgb(117, 131, 117),rgb(7, 21, 7));
+}
+.flower {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 80px;
+    transition: transform 0.3s;
+}
+.petal {
+    position: absolute;
+    width: 30px;
+    height: 80px;
+    background: radial-gradient(rgba(25, 9, 30, 0.942),rgb(159, 21, 115), rgb(34, 3, 34), rgb(189, 137, 40));
+    border-radius: 50%;
+    transition: transform 0.3s;
+    border: 1px solid rgb(138, 10, 177);
+    box-shadow: 0 0 5px  rgba(115, 43, 144, 0.5);
+}
+
+.open .petal {
+    transform: rotate(var(--angle)) translateY(-100%);
+}
+
