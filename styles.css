@@ -1,0 +1,97 @@
+body {
+    position: relative;
+    background-color: #1a1c2d;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.eye-container {
+    position: relative;
+    width: 200px;
+    height: 100px;
+}
+
+.eye {
+    width: 200px;
+    height: 100px;
+    background: radial-gradient(circle, pink, wheat, rgb(212, 132, 180)) white;
+    border: 5px solid #000;
+    border-top: 20px solid rgb(8, 8, 8);
+    border-radius: 100px / 55px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    clip-path: ellipse(150px 75px at 50% 50%);
+}
+.eye::before, .eye::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+.eye::before {
+    left: -10px;
+}
+
+.eye::after {
+    right: -10px;
+}
+.iris {
+    width: 120px;
+    height: 120px;
+    background-color: #1e90ff;
+    border: 5px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: moveInCircle 5s linear infinite;
+    transition: transform 0.1s;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.pupil {
+    width: 60px;
+    height: 60px;
+    background-color: #000;
+    border: 15px solid rgb(0, 204, 255);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.reflection {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+@keyframes moveInCircle {
+    0% {
+        transform: translate(-50%, -50%) translate(30px, 0);
+    }
+    25% {
+        transform: translate(-50%, -50%) translate(0, 30px);
+    }
+    50% {
+        transform: translate(-50%, -50%) translate(-30px, 0);
+    }
+    75% {
+        transform: translate(-50%, -50%) translate(0, -30px);
+    }
+    100% {
+        transform: translate(-50%, -50%) translate(30px, 0);
+    }
+}
