@@ -1,127 +1,408 @@
+/* General styling for the page */
 body {
-    position: relative;
-    background-color: #3c66bb;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden;
+  margin: 0;
+  background-color: rgb(248, 244, 244);
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background 0.5s ease;
 }
 
-.eye-container {
-    position: relative;
-    width: 200px;
-    height: 100px;
-    cursor: grab;
+.container {
+  text-align: center;
+  padding: 50px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
 }
 
-.eye {
-    width: 200px;
-    height: 100px;
-    background: radial-gradient(circle, pink, wheat, rgb(212, 132, 180)) white;
-    border: 5px solid #000;
-    border-top: 20px solid rgb(8, 8, 8);
-    border-radius: 100px / 55px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    clip-path: ellipse(150px 75px at 50% 50%);
-}
-.eye::before, .eye::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 15px;
-    height: 15px;
-    background: white;
-    border-radius: 50%;
-    transform: translateY(-50%);
-}
-.eye::before {
-    left: -10px;
+#logo {
+  max-width: 400px;
+  width: 100%;
+  margin-bottom: 20px;
+  opacity: 0.8; /* Slight transparency for blending effect */
+  mix-blend-mode: multiply; /* Blend with the background color */
 }
 
-.eye::after {
-    right: -10px;
-}
-.iris {
-    width: 120px;
-    height: 120px;
-    background-color: #1e90ff;
-    border: 5px solid #000;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: moveInCircle 5s linear infinite;
-    transition: transform 0.1s;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+#search-box {
+  padding: 10px;
+  width: 80%;
+  max-width: 500px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
-.pupil {
-    width: 60px;
-    height: 60px;
-    background-color: #000;
-    border: 15px solid rgb(0, 204, 255);
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.genre-buttons {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three buttons per row */
+  gap: 10px; /* Space between buttons */
 }
 
-.reflection {
-    width: 20px;
-    height: 20px;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 50%;
-    position: absolute;
-    top: 25%;
-    left: 25%;
+/* Genre button styles with gradients, box-shadow, and border-radius */
+.genre-buttons button {
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background 0.3s ease; /* Include background in transition */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Box shadow */
 }
 
-@keyframes moveInCircle {
-    0% {
-        transform: translate(-50%, -50%) translate(30px, 0);
-    }
-    25% {
-        transform: translate(-50%, -50%) translate(0, 30px);
-    }
-    50% {
-        transform: translate(-50%, -50%) translate(-30px, 0);
-    }
-    75% {
-        transform: translate(-50%, -50%) translate(0, -30px);
-    }
-    100% {
-        transform: translate(-50%, -50%) translate(30px, 0);
-    }
+/* Apply gradient using the data-color attribute */
+.genre-buttons button[data-color] {
+  --color-start: var(--color-start, #000); /* Fallback color */
+  --color-end: var(--color-end, #333); /* Fallback color */
+  background: linear-gradient(135deg, var(--color-start), var(--color-end));
 }
 
-.upper-eyelid, .lower-eyelid {
-    position: absolute;
+/* Define specific gradients based on data-color */
+.genre-buttons button[data-color="#D32F2F"] {
+  --color-start: #D32F2F;
+  --color-end: #ff6b6b; /* Example gradient for Horror */
+}
+
+.genre-buttons button[data-color="#C2185B"] {
+  --color-start: #C2185B;
+  --color-end: #ff7373; /* Example gradient for Crime */
+}
+
+.genre-buttons button[data-color="#7B1FA2"] {
+  --color-start: #7B1FA2;
+  --color-end: #c17fce; /* Example gradient for Mystery */
+}
+
+.genre-buttons button[data-color="#E91E63"] {
+  --color-start: #E91E63;
+  --color-end: #ee649d; /* Example gradient for Romance */
+}
+
+.genre-buttons button[data-color="#FFC107"] {
+  --color-start: #FFC107;
+  --color-end: #ffd700; /* Example gradient for Comedy */
+}
+
+.genre-buttons button[data-color="#388E3C"] {
+  --color-start: #388E3C;
+  --color-end: #dde15b; /* Example gradient for Nature */
+}
+
+.genre-buttons button[data-color="#F57C00"] {
+  --color-start: #F57C00;
+  --color-end: #b48291; /* Example gradient for Adventure */
+}
+
+.genre-buttons button[data-color="#0288D1"] {
+  --color-start: #169eec;
+  --color-end: #a3a4ff; /* Example gradient for Sci-Fi */
+}
+
+.genre-buttons button[data-color="#7E57C2"] {
+  --color-start: #7E57C2;
+  --color-end: #768cc9; /* Example gradient for Fantasy */
+}
+
+/* Hover effect for the buttons */
+.genre-buttons button:hover {
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4); /* Enhance the shadow on hover */
+  background: linear-gradient(
+    135deg,
+    var(--color-end),
+    var(--color-start)
+  ); /* Reverse the gradient on hover */
+}
+
+
+/* Add any specific styles for the new buttons here if needed */
+
+
+#results {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
+  gap: 20px; /* Space between result blocks */
+  max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
+  justify-items: center; /* Center items horizontally */
+}
+
+.result-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+  width: 100%; /* Full width within grid item */
+}
+
+.result-item:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.result-item img {
+  max-width: 100px; /* Limit the image size */
+  margin-bottom: 15px;
+}
+
+.result-item h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #0a0a0a;
+}
+
+.result-item p {
+  margin: 5px 0;
+  color: #fffefe;
+}
+
+
+
+footer {
+  background-color: #222f3b;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-content p {
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px;
+  }
+
+  #search-box {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .genre-buttons {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); 
+  }
+
+  .genre-buttons button {
+    padding: 8px 16px; /* Smaller padding */
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .result-item img {
+    max-width: 80px;
+  }
+
+  footer {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+
+  #search-box {
     width: 100%;
-    height: 50%;
-    background: radial-gradient(rgba(96, 96, 219, 0.647),rgba(36, 47, 48, 0.192)) ;
-    z-index: 2;
-    animation: blink 5s infinite;
+    font-size: 14px;
+  }
+
+  .genre-buttons {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* Still three buttons per row on small screens */
+    gap: 5px; /* Reduce gap on small screens */
+  }
+
+  .genre-buttons button {
+    padding: 6px 12px; /* Even smaller padding */
+    font-size: 12px; /* Even smaller font size */
+  }
+
+  #results {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust grid for small screens */
+    gap: 10px;
+  }
+
+  .result-item img {
+    max-width: 60px;
+  }
+
+  footer {
+    padding: 10px;
+  }
 }
 
-.upper-eyelid {
-    top: 0;
-    border-radius: 100px 100px 0 0;
-    transform-origin: top;
+a {
+  text-decoration: none;
+  color: #000;
 }
 
-.lower-eyelid {
-    bottom: 0;
-    border-radius: 0 0 100px 100px;
-    transform-origin: bottom;
+#flower-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Flowers shouldn't interfere with user interactions */
+  overflow: hidden; /* Hide flowers that move out of view */
 }
-@keyframes blink {
-    0%, 20%, 40%, 60%, 80%, 100% {
-        transform: scaleY(0);
-    }
-    10%, 30%, 50%, 70%, 90% {
-        transform: scaleY(1);
-    }
+
+.flower {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url("flower.png"); /* Replace with your flower image */
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: transform 2s ease, opacity 2s ease;
+}
+
+/* Active button style */
+.genre-buttons button.active {
+    background: linear-gradient(135deg, var(--color-end), var(--color-start)); /* Reverse gradient for active state */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.6); 
+    transform: scale(1.1); 
+}
+
+/* Loader styling */
+#loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+  display: none; /* Hidden by default */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Show loader when active */
+#loader.active {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+#error-message {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#suggestions {
+  border: 1px solid #ccc;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  position: absolute;
+  z-index: 1000;
+  width: calc(80% - 2px); /* Match search box width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+.hidden {
+  display: none;
+}
+
+
+#animation-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Prevent interaction with animated elements */
+  overflow: hidden;
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.animated-item {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: transform 2s ease, opacity 2s ease;
+}
+
+.heart {
+  background-image: url('heart.png'); /* Replace with your heart image */
+}
+
+.leaf {
+  background-image: url('leaves.png'); /* Replace with your leaf image */
+}
+
+.star {
+  background-image: url('rocket.png'); /* Replace with your star image */
+}
+.comedy {
+  background-image: url('comedy.png');
+}
+.fantasy {
+  background-image: url('fantasy.png');
+}
+.mystery {
+  background-image: url('mystery.png');
+}
+.horror {
+  background-image: url('horror.png');
+}
+/* Additional animation styles for other genres can go here */
+
+/* Animation effect */
+.animated-item.animate {
+  opacity: 1;
+  transform: translateY(-200px) rotate(360deg);
 }
