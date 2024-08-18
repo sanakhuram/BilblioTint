@@ -68,37 +68,37 @@ body {
 
 /* Define specific gradients based on data-color */
 .genre-buttons button[data-color="#D32F2F"] {
-  --color-start: #D32F2F;
+  --color-start: #d32f2f;
   --color-end: #ff6b6b; /* Example gradient for Horror */
 }
 
 .genre-buttons button[data-color="#C2185B"] {
-  --color-start: #C2185B;
+  --color-start: #c2185b;
   --color-end: #ff7373; /* Example gradient for Crime */
 }
 
 .genre-buttons button[data-color="#7B1FA2"] {
-  --color-start: #7B1FA2;
+  --color-start: #7b1fa2;
   --color-end: #c17fce; /* Example gradient for Mystery */
 }
 
 .genre-buttons button[data-color="#E91E63"] {
-  --color-start: #E91E63;
+  --color-start: #e91e63;
   --color-end: #ee649d; /* Example gradient for Romance */
 }
 
 .genre-buttons button[data-color="#FFC107"] {
-  --color-start: #FFC107;
+  --color-start: #ffc107;
   --color-end: #ffd700; /* Example gradient for Comedy */
 }
 
 .genre-buttons button[data-color="#388E3C"] {
-  --color-start: #388E3C;
+  --color-start: #388e3c;
   --color-end: #dde15b; /* Example gradient for Nature */
 }
 
 .genre-buttons button[data-color="#F57C00"] {
-  --color-start: #F57C00;
+  --color-start: #f57c00;
   --color-end: #b48291; /* Example gradient for Adventure */
 }
 
@@ -108,7 +108,7 @@ body {
 }
 
 .genre-buttons button[data-color="#7E57C2"] {
-  --color-start: #7E57C2;
+  --color-start: #7e57c2;
   --color-end: #768cc9; /* Example gradient for Fantasy */
 }
 
@@ -123,14 +123,15 @@ body {
   ); /* Reverse the gradient on hover */
 }
 
-
 /* Add any specific styles for the new buttons here if needed */
-
 
 #results {
   margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Responsive grid layout */
   gap: 20px; /* Space between result blocks */
   max-width: 1200px;
   width: 100%;
@@ -171,8 +172,6 @@ body {
   color: #fffefe;
 }
 
-
-
 footer {
   background-color: #222f3b;
   color: #ffffff;
@@ -207,10 +206,7 @@ footer a:hover {
   }
 
   .genre-buttons {
-    grid-template-columns: repeat(
-      3,
-      1fr
-    ); 
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .genre-buttons button {
@@ -251,7 +247,10 @@ footer a:hover {
   }
 
   #results {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust grid for small screens */
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(150px, 1fr)
+    ); /* Adjust grid for small screens */
     gap: 10px;
   }
 
@@ -292,9 +291,13 @@ a {
 
 /* Active button style */
 .genre-buttons button.active {
-    background: linear-gradient(135deg, var(--color-end), var(--color-start)); /* Reverse gradient for active state */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.6); 
-    transform: scale(1.1); 
+  background: linear-gradient(
+    135deg,
+    var(--color-end),
+    var(--color-start)
+  ); /* Reverse gradient for active state */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.6);
+  transform: scale(1.1);
 }
 
 /* Loader styling */
@@ -310,8 +313,12 @@ a {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Show loader when active */
@@ -354,7 +361,6 @@ a {
   display: none;
 }
 
-
 #animation-container {
   position: absolute;
   top: 0;
@@ -377,27 +383,30 @@ a {
 }
 
 .heart {
-  background-image: url('heart.png'); /* Replace with your heart image */
+  background-image: url("heart.png"); /* Replace with your heart image */
 }
 
 .leaf {
-  background-image: url('leaves.png'); /* Replace with your leaf image */
+  background-image: url("leaves.png"); /* Replace with your leaf image */
 }
 
 .star {
-  background-image: url('rocket.png'); /* Replace with your star image */
+  background-image: url("rocket.png"); /* Replace with your star image */
 }
 .comedy {
-  background-image: url('comedy.png');
+  background-image: url("comedy.png");
 }
 .fantasy {
-  background-image: url('fantasy.png');
+  background-image: url("fantasy.png");
 }
 .mystery {
-  background-image: url('mystery.png');
+  background-image: url("mystery.png");
+}
+.crime {
+  background-image: url("horror.png");
 }
 .horror {
-  background-image: url('horror.png');
+  background-image: url("skull.png");
 }
 /* Additional animation styles for other genres can go here */
 
