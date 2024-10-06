@@ -58,31 +58,6 @@ Want to run BilblioTint on your own machine? Follow these easy steps:
 3. **Get details**: Click on a book for more information!
 4. **Enjoy!**: BilblioTint gives you a delightful way to discover books.
 
-## ⚙️ API in Action
-
-Here's how we fetch the books using the **Google Books API**:
-
-```javascript
-fetch(`https://www.googleapis.com/books/v1/volumes?q=search_term&key=${API_KEY}`)
-  .then(response => response.json())
-  .then(data => {
-    // Process and display the book data
-  })
-  .catch(error => {
-    console.error('Error fetching book data:', error);
-  });
-```
-
-Simple, right? 🤓
-
-## 📽️ Demo Video
-
-Click the link below to watch the video demo:
-
-[Download the video demo](Untitled video (15))
-
-
-
 ## 📜 License
 
 This project is licensed under the **MIT License** – so feel free to use it however you like! See the [LICENSE](LICENSE) file for more details.
