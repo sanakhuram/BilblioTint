@@ -66,7 +66,7 @@ This project is licensed under the **MIT License** – so feel free to use it ho
 
 Have questions, suggestions, or just want to say hi? 🙋‍♀️ Let’s connect!
 
-- **Email**: [sana.khuram.baig@example.com]  
+- **Email**: [sana.khuram.baig@gmail.com]  
 - **GitHub**: [@sanakhuram](https://github.com/sanakhuram)
 
 ---
