@@ -3,6 +3,10 @@
 ![image](https://github.com/user-attachments/assets/d6da1d05-e0ee-451e-a578-b37c801fc39d)
 Welcome to **BilblioTint**, the ultimate book search website for all the bibliophiles out there! 🚀 Dive into the world of books, search for your favorite titles, discover new authors, and find your next read – all with the help of the **Google Books API**. Let’s make book browsing fun and easy! 🎉
 
+## Live View🔍 ##
+
+https://sanakhuram.github.io/BilblioTint/
+
 ## 🌟 Features
 
 - 🔍 **Search for Books**: Just type in your favorite book title, author, or keyword, and let the magic happen!
