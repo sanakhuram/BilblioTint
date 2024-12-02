@@ -4,7 +4,6 @@ export function fetchBooksByGenre(genre) {
   resultsContainer.innerHTML = "";
   loader.classList.add("active");
 
-  // Handle "Sci-Fi" as "Science Fiction"
   if (genre.toLowerCase() === "sci-fi") {
     genre = "Science Fiction";
   }

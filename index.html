@@ -1,67 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BiblioTint</title>
-    <meta
-      name="description"
-      content="BiblioTint - Explore a world where every book genre shines uniquely. Search for your favorite books, discover new genres, and enjoy a personalized reading experience."
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-  </head>
-  <body>
-    <div class="container">
-      <!-- Wrap the logo in an anchor tag -->
-      <a href="index.html" id="logo-link">
-        <img id="logo" src="Biblio.png" alt="BiblioTint Logo" />
-      </a>
-      <input type="text" id="search-box" placeholder="Search for a book" />
-      <div id="suggestions" class="hidden"></div>
 
-      <div class="genre-buttons">
-        <button data-genre="horror" data-color="#D32F2F">Horror</button>
-        <button data-genre="crime" data-color="#C2185B">Crime</button>
-        <button data-genre="mystery" data-color="#7B1FA2">Mystery</button>
-        <button data-genre="romance" data-color="#E91E63">Romance</button>
-        <button data-genre="comedy" data-color="#FFC107">Comedy</button>
-        <button data-genre="nature" data-color="#388E3C">Nature</button>
-        <button data-genre="adventure" data-color="#F57C00">Adventure</button>
-        <button data-genre="sci-fi" data-color="#0288D1">Sci-Fi</button>
-        <button data-genre="fantasy" data-color="#7E57C2">Fantasy</button>
-      </div>
-      <div id="loader" class="hidden"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BiblioTint</title>
+  <meta name="description"
+    content="BiblioTint - Explore a world where every book genre shines uniquely. Search for your favorite books, discover new genres, and enjoy a personalized reading experience." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+</head>
 
-      <div id="results"></div>
-      <!-- Display search results here -->
+<body>
+  <div class="container">
+    <a href="index.html" id="logo-link">
+      <img id="logo" src="Biblio.png" alt="BiblioTint Logo" />
+    </a>
+    <input type="text" id="search-box" placeholder="Search for a book" />
+    <div id="suggestions" class="hidden"></div>
+
+    <div class="genre-buttons">
+      <button data-genre="horror" data-color="#D32F2F">Horror</button>
+      <button data-genre="crime" data-color="#C2185B">Crime</button>
+      <button data-genre="mystery" data-color="#7B1FA2">Mystery</button>
+      <button data-genre="romance" data-color="#E91E63">Romance</button>
+      <button data-genre="comedy" data-color="#FFC107">Comedy</button>
+      <button data-genre="nature" data-color="#388E3C">Nature</button>
+      <button data-genre="adventure" data-color="#F57C00">Adventure</button>
+      <button data-genre="sci-fi" data-color="#0288D1">Sci-Fi</button>
+      <button data-genre="fantasy" data-color="#7E57C2">Fantasy</button>
     </div>
-    <!-- Flower elements for animation -->
-    <div id="flower-container"></div>
+    <div id="loader" class="hidden"></div>
 
-    <div id="animation-container"></div>
+    <div id="results"></div>
+  </div>
+  <div id="flower-container"></div>
 
-    <!-- Footer section -->
+  <div id="animation-container"></div>
 
-    <footer>
-      <div class="footer-content">
-        <p>&copy; 2024 BiblioTint. All rights reserved.</p>
-        <p>
-          <a href="https://www.bibliotint.com/privacy-policy">Privacy Policy</a>
-          |
-          <a href="https://www.bibliotint.com/terms-of-service"
-            >Terms of Service</a
-          >
-        </p>
-        <p>
-          Contact us:
-          <a href="https://github.com/sanakhuram"
-            >Project created by Sana Khuram</a
-          >
-        </p>
-      </div>
-    </footer>
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 BiblioTint. All rights reserved.</p>
+      <p>
+        <a href="https://www.bibliotint.com/privacy-policy">Privacy Policy</a>
+        |
+        <a href="https://www.bibliotint.com/terms-of-service">Terms of Service</a>
+      </p>
+      <p>
+        Contact us:
+        <a href="https://github.com/sanakhuram">Project created by Sana Khuram</a>
+      </p>
+    </div>
+  </footer>
 
-    <script type="module" src="main.js"></script>
-  </body>
+  <script type="module" src="main.js"></script>
+</body>
+
 </html>

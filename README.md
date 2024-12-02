@@ -1,9 +1,9 @@
-
 # 📚✨ BilblioTint – Explore the World of Books!
+
 ![image](https://github.com/user-attachments/assets/d6da1d05-e0ee-451e-a578-b37c801fc39d)
 Welcome to **BilblioTint**, the ultimate book search website for all the bibliophiles out there! 🚀 Dive into the world of books, search for your favorite titles, discover new authors, and find your next read – all with the help of the **Google Books API**. Let’s make book browsing fun and easy! 🎉
 
-## Live View🔍 ##
+## Live View🔍
 
 https://sanakhuram.github.io/BilblioTint/
 
@@ -22,20 +22,23 @@ Want to run BilblioTint on your own machine? Follow these easy steps:
 
 - A code editor like **VS Code** or **Sublime Text**.
 - A local server like **XAMPP** or **WAMP** (or any basic web server).
-  
+
 ### Installation Steps
 
 1. **Clone the Repository** 🛠️:
+
    ```bash
    git clone https://github.com/sanakhuram/BilblioTint.git
    ```
 
 2. **Navigate to the project folder**:
+
    ```bash
    cd BilblioTint
    ```
 
 3. **Get your Google Books API Key** 🔑:
+
    - Head over to [Google Books API](https://developers.google.com/books) and sign up for a free API key.
    - Create a file called `config.js` in the root folder of the project, and add this line:
      ```javascript
@@ -70,10 +73,9 @@ This project is licensed under the **MIT License** – so feel free to use it ho
 
 Have questions, suggestions, or just want to say hi? 🙋‍♀️ Let’s connect!
 
-- **Email**: [sana.khuram.baig@gmail.com]  
+- **Email**: [sana.khuram.baig@gmail.com]
 - **GitHub**: [@sanakhuram](https://github.com/sanakhuram)
 
 ---
 
 Thank you for checking out **BilblioTint**! 🎉 Happy reading and happy coding! 📚💻
-

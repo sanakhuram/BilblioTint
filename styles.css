@@ -1,4 +1,4 @@
-/* General styling for the page */
+
 body {
   margin: 0;
   background-color: rgb(248, 244, 244);
@@ -42,11 +42,10 @@ body {
 .genre-buttons {
   margin-bottom: 20px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three buttons per row */
-  gap: 10px; /* Space between buttons */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 10px; 
 }
 
-/* Genre button styles with gradients, box-shadow, and border-radius */
 .genre-buttons button {
   border: none;
   padding: 10px 20px;
@@ -55,73 +54,70 @@ body {
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.2s ease-in-out, background 0.3s ease; 
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   font-family: cursive; 
 }
 
-/* Apply gradient using the data-color attribute */
 .genre-buttons button[data-color] {
-  --color-start: var(--color-start, #000); /* Fallback color */
-  --color-end: var(--color-end, #333); /* Fallback color */
+  --color-start: var(--color-start, #000); 
+  --color-end: var(--color-end, #333); 
   background: linear-gradient(135deg, var(--color-start), var(--color-end));
 }
 
-/* Define specific gradients based on data-color */
 .genre-buttons button[data-color="#D32F2F"] {
   --color-start: #d32f2f;
-  --color-end: #ff6b6b; /* Example gradient for Horror */
+  --color-end: #ff6b6b; 
 }
 
 .genre-buttons button[data-color="#C2185B"] {
   --color-start: #c2185b;
-  --color-end: #ff7373; /* Example gradient for Crime */
+  --color-end: #ff7373; 
 }
 
 .genre-buttons button[data-color="#7B1FA2"] {
   --color-start: #7b1fa2;
-  --color-end: #c17fce; /* Example gradient for Mystery */
+  --color-end: #c17fce; 
 }
 
 .genre-buttons button[data-color="#E91E63"] {
   --color-start: #e91e63;
-  --color-end: #ee649d; /* Example gradient for Romance */
+  --color-end: #ee649d; 
 }
 
 .genre-buttons button[data-color="#FFC107"] {
   --color-start: #ffc107;
-  --color-end: #ffd700; /* Example gradient for Comedy */
+  --color-end: #ffd700; 
 }
 
 .genre-buttons button[data-color="#388E3C"] {
   --color-start: #388e3c;
-  --color-end: #dde15b; /* Example gradient for Nature */
+  --color-end: #dde15b; 
 }
 
 .genre-buttons button[data-color="#F57C00"] {
   --color-start: #f57c00;
-  --color-end: #b48291; /* Example gradient for Adventure */
+  --color-end: #b48291; 
 }
 
 .genre-buttons button[data-color="#0288D1"] {
   --color-start: #169eec;
-  --color-end: #a3a4ff; /* Example gradient for Sci-Fi */
+  --color-end: #a3a4ff; 
 }
 
 .genre-buttons button[data-color="#7E57C2"] {
   --color-start: #7e57c2;
-  --color-end: #768cc9; /* Example gradient for Fantasy */
+  --color-end: #768cc9; 
 }
 
-/* Hover effect for the buttons */
 .genre-buttons button:hover {
-  transform: scale(1.05); /* Slightly enlarge the button on hover */
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4); /* Enhance the shadow on hover */
+  transform: scale(1.05); 
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4); 
   background: linear-gradient(
     135deg,
     var(--color-end),
     var(--color-start)
-  ); /* Reverse the gradient on hover */
+  ); 
 }
 
 
@@ -132,12 +128,12 @@ body {
   grid-template-columns: repeat(
     auto-fit,
     minmax(200px, 1fr)
-  ); /* Responsive grid layout */
-  gap: 20px; /* Space between result blocks */
+  ); 
+  gap: 20px; 
   max-width: 1200px;
   width: 100%;
   box-sizing: border-box;
-  justify-items: center; /* Center items horizontally */
+  justify-items: center; 
 }
 
 .result-item {
@@ -146,19 +142,19 @@ body {
   align-items: center;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
   text-align: center;
   transition: transform 0.2s ease-in-out;
   cursor: pointer;
-  width: 100%; /* Full width within grid item */
+  width: 100%; 
 }
 
 .result-item:hover {
-  transform: scale(1.05); /* Slightly enlarge on hover */
+  transform: scale(1.05); 
 }
 
 .result-item img {
-  max-width: 100px; /* Limit the image size */
+  max-width: 100px; 
   margin-bottom: 15px;
 }
 
@@ -195,7 +191,6 @@ footer a:hover {
   font-size: 15px;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .container {
     padding: 30px;
@@ -211,8 +206,8 @@ footer a:hover {
   }
 
   .genre-buttons button {
-    padding: 8px 16px; /* Smaller padding */
-    font-size: 14px; /* Smaller font size */
+    padding: 8px 16px; 
+    font-size: 14px; 
   }
 
   .result-item img {
@@ -238,20 +233,20 @@ footer a:hover {
     grid-template-columns: repeat(
       3,
       1fr
-    ); /* Still three buttons per row on small screens */
-    gap: 5px; /* Reduce gap on small screens */
+    ); 
+    gap: 5px; 
   }
 
   .genre-buttons button {
-    padding: 6px 12px; /* Even smaller padding */
-    font-size: 12px; /* Even smaller font size */
+    padding: 6px 12px; 
+    font-size: 12px; 
   }
 
   #results {
     grid-template-columns: repeat(
       auto-fit,
       minmax(150px, 1fr)
-    ); /* Adjust grid for small screens */
+    ); 
     gap: 10px;
   }
 
@@ -275,42 +270,40 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* Flowers shouldn't interfere with user interactions */
-  overflow: hidden; /* Hide flowers that move out of view */
+  pointer-events: none; 
+  overflow: hidden; 
 }
 
 .flower {
   position: absolute;
   width: 40px;
   height: 40px;
-  background-image: url("flower.png"); /* Replace with your flower image */
+  background-image: url("flower.png"); 
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0;
   transition: transform 2s ease, opacity 2s ease;
 }
 
-/* Active button style */
 .genre-buttons button.active {
   background: linear-gradient(
     135deg,
     var(--color-end),
     var(--color-start)
-  ); /* Reverse gradient for active state */
+  ); 
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.6);
   transform: scale(1.1);
 }
 
-/* Loader styling */
 #loader {
-  border: 8px solid #f3f3f3; /* Light grey */
-  border-top: 8px solid #db345e; /* Blue */
+  border: 8px solid #f3f3f3; 
+  border-top: 8px solid #db345e; 
   border-radius: 50%;
   width: 60px;
   height: 60px;
   animation: spin 1s linear infinite;
   margin: 20px auto;
-  display: none; /* Hidden by default */
+  display: none; 
 }
 
 @keyframes spin {
@@ -322,7 +315,6 @@ a {
   }
 }
 
-/* Show loader when active */
 #loader.active {
   display: block;
 }
@@ -344,7 +336,7 @@ a {
   background-color: #fff;
   position: absolute;
   z-index: 1000;
-  width: calc(80% - 2px); /* Match search box width */
+  width: calc(80% - 2px); 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
 }
@@ -368,9 +360,9 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* Prevent interaction with animated elements */
+  pointer-events: none; 
   overflow: hidden;
-  z-index: 1000; /* Ensure it appears above other content */
+  z-index: 1000; 
 }
 
 .animated-item {
@@ -384,15 +376,15 @@ a {
 }
 
 .heart {
-  background-image: url("heart.png"); /* Replace with your heart image */
+  background-image: url("heart.png"); 
 }
 
 .leaf {
-  background-image: url("leaves.png"); /* Replace with your leaf image */
+  background-image: url("leaves.png"); 
 }
 
 .star {
-  background-image: url("rocket.png"); /* Replace with your star image */
+  background-image: url("rocket.png"); 
 }
 .comedy {
   background-image: url("comedy.png");
@@ -409,9 +401,7 @@ a {
 .horror {
   background-image: url("skull.png");
 }
-/* Additional animation styles for other genres can go here */
 
-/* Animation effect */
 .animated-item.animate {
   opacity: 1;
   transform: translateY(-200px) rotate(360deg);

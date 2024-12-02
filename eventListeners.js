@@ -45,22 +45,16 @@ document.getElementById("logo-link").addEventListener("click", function (event) 
     }, 2000);
 });
 
-// Get all the genre buttons
 const buttons = document.querySelectorAll('.genre-buttons button');
 
-// Add a click event listener to each button
 buttons.forEach(button => {
     button.addEventListener('click', function() {
-        // Remove 'active' class from all buttons
         buttons.forEach(btn => btn.classList.remove('active'));
         
-        // Add 'active' class to the clicked button
         this.classList.add('active');
 
-        // Optionally, change the background color of the page
         document.body.style.backgroundColor = this.getAttribute('data-color');
 
-        // Call the function to fetch books related to the selected genre
         fetchBooksByGenre(this.getAttribute('data-genre'));
     });
 });
